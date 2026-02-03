@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HashTrack</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="root">
+      <h3>HashTrack</h3>
+      <div id="info">Open an e-commerce site to see its Trust Score.</div>
+    </div>
+    <script>
+      // simple popup: show most recent domain info
+      chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        if(!tabs[0]) return;
+        const url = new URL(tabs[0].url || '');
+        const domain = url.hostname;
+        if(!domain) return;
+        chrome.storage.local.get([domain], function(result){
+          const el = document.getElementById('info');
+          if(result && result[domain]){
+            el.innerText = `Domain: ${result[domain].domain}\nTrust: ${result[domain].trust_score} (${result[domain].risk_level})`;
+          } else {
+            el.innerText = 'No cached score. Visit the site to fetch a score.';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
