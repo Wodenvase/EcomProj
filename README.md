@@ -1,4 +1,4 @@
-HashTrack: The E-Commerce Identity Engine
+EcomProj: The E-Commerce Identity Engine
 =======================================
 
 Protecting Online Shoppers from "Digital Impersonation" & Retail Fraud
@@ -6,7 +6,7 @@ Protecting Online Shoppers from "Digital Impersonation" & Retail Fraud
 Overview
 --------
 
-**HashTrack** is a browser-based cybersecurity tool designed to detect fraudulent e-commerce websites in real-time. Unlike traditional antivirus software that scans for malware files, HashTrack analyzes the **behavioral and structural "DNA"** of a website to determine if it is a legitimate business or a "fly-by-night" scam operation.
+**EcomProj** is a browser-based cybersecurity tool designed to detect fraudulent e-commerce websites in real-time. Unlike traditional antivirus software that scans for malware files, EcomProj analyzes the **behavioral and structural "DNA"** of a website to determine if it is a legitimate business or a "fly-by-night" scam operation.
 
 - The Problem: E-commerce fraud is moving away from "hacking" users to "social engineering" them. Fake stores (e.g., `nike-clearance-sale-24.com`) look identical to real ones but exist solely to harvest credit card data.
 - The Solution: An MLOps-driven browser extension that acts as a "Trust Meter," overlaying a safety score (0-100) on every shopping site visited.
@@ -77,7 +77,7 @@ Directory Structure
 -------------------
 
 ```
-hashtrack/
+EcomProj/
 ├── backend/                  # The Brain (Python/FastAPI)
 │   ├── app/
 │   │   ├── main.py           # API Entry point
